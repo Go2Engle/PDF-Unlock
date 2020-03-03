@@ -1,6 +1,6 @@
 # PDF-Unlock
 
-Small tool that utilizes GhostScript to unlocked a protected PDF
+Small tool that utilizes GhostScript to unlock a protected PDF
 
 ![Alt text](/Screenshots/PDF-Unlock.png?raw=true)
 
