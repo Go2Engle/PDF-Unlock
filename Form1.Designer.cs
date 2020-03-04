@@ -40,13 +40,16 @@
             this.gswin64cLocationtxt = new System.Windows.Forms.TextBox();
             this.browseGswin64cbtn = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pdfDropBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pdfDropBox
             // 
             this.pdfDropBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pdfDropBox.Controls.Add(this.pictureBox1);
             this.pdfDropBox.Controls.Add(this.label1);
             this.pdfDropBox.Location = new System.Drawing.Point(12, 62);
             this.pdfDropBox.Name = "pdfDropBox";
@@ -59,8 +62,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 61);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(214, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 0;
@@ -142,6 +145,16 @@
             this.openFileDialog2.InitialDirectory = "C:\\Program Files\\gs";
             this.openFileDialog2.Title = "gswin64c.ee";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(232, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -168,6 +181,7 @@
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.pdfDropBox_DragEnter);
             this.pdfDropBox.ResumeLayout(false);
             this.pdfDropBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +200,7 @@
         private System.Windows.Forms.TextBox gswin64cLocationtxt;
         private System.Windows.Forms.Button browseGswin64cbtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
