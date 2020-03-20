@@ -15,6 +15,7 @@ namespace PDF_Unlock
     public partial class Form1 : Form
     {
         const string quote = "\"";
+        string temp = Path.GetTempPath();
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace PDF_Unlock
             if (extension == ".pdf") {
                 pdffile.Text = pdfFile[0];
                 UnlockPDF();
-                Process.Start(@"%TEMP%\temp.pdf");
+                Process.Start(temp+"temp.pdf");
             }
             else
             {
@@ -52,7 +53,7 @@ namespace PDF_Unlock
                 {
                     pdffile.Text = openFileDialog1.FileName;
                     UnlockPDF();
-                    Process.Start(@"%TEMP%\temp.pdf");
+                    Process.Start(temp+"temp.pdf");
                 }
                 else
                 {
@@ -67,7 +68,7 @@ namespace PDF_Unlock
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = gswin64cLocationtxt.Text;
-            startInfo.Arguments = @"-dPDFA -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=%TEMP%\temp.pdf " + quote + pdffile.Text + quote;
+            startInfo.Arguments = @"-dPDFA -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="+temp+"temp.pdf " + quote + pdffile.Text + quote;
             process.StartInfo = startInfo;
             process.Start();
             process.WaitForExit();
@@ -100,7 +101,7 @@ namespace PDF_Unlock
             
             try
             {
-                File.Delete(@"C:\temp\temp.pdf");
+                File.Delete(temp+"temp.pdf");
 
             }
             catch(Exception)
@@ -114,7 +115,7 @@ namespace PDF_Unlock
             gswin64cLocationtxt.Text = Properties.Settings.Default.gswin64cLocation;
             try
             {
-                File.Delete(@"C:\temp\temp.pdf");
+                File.Delete(temp+"temp.pdf");
 
             }
             catch (Exception)
